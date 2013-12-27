@@ -2,61 +2,73 @@ body {
     background-image: url('img/tweed_@2X.png');
 }
 
-a.nav-link {
-    padding-top:10px;
-    padding-bottom:10px;
-    padding-right:10px;
-    padding-left:10px;
+.nav-bar {
+    opacity:0.8;
+    border: 1px solid #cccccc;
+    background: #eeeeee;
+    width: 80%;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 20px #000000;
 }
 
-a.nav-link:hover {
-    background-color:white;
-    text-decoration: none;
-    color: #777777;
+
+.nav-bar-title {
+    font-size: 75%;
 }
 
-a.nav-link:link {
-    text-decoration:none;
-    color: #777777;
-}
-
-a.nav-link:visited {
-    text-decoration:none;
-    color: #777777;
-}
-
-a.nav-link:active {
-    text-decoration:none;
-    color: #777777;
-}
-
-.nav-text {
-    color: #777777;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 150%
-}
-
-.left {
-    text-align: left;
-}
-
-.center {
+.nav-links {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
-.right {
-    text-align: right;
+.nav-item {
+    color: #777777;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-right:10px;
+    padding-left:10px;
+    vertical-align: middle;
 }
 
-.box {
-    opacity:0.8;
-    border: 1px solid #a1a1a1;
-    padding: 10px 10px; 
-    background: #eeeeee;
-    width: auto;
-    border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0px 0px 15px #000000;
+a.nav-item {
+    font-size: 150%;
 }
 
+a.nav-item:hover {
+    background-color:white;
+    text-decoration: none;
+    color: #777777;
+    border-radius: 3px;
+    box-shadow: 0px 0px 20px #000000;
+}
+
+a.nav-item:link {
+    text-decoration:none;
+    color: #777777;
+}
+
+a.nav-item:visited {
+    text-decoration:none;
+    color: #777777;
+}
+
+a.nav-item:active {
+    background-color:white;
+    text-decoration: none;
+    color: #777777;
+    border-radius: 3px;
+    box-shadow: 0px 0px 20px #000000;
+}
+
+.current {
+    background-color:white;
+    text-decoration: none;
+    color: #777777;
+    border-radius: 3px;
+    box-shadow: 0px 0px 20px #000000;
+}

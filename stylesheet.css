@@ -2,6 +2,10 @@ body {
     background-image: url('img/tweed_@2X.png');
 }
 
+a:focus { 
+    outline: none; 
+}
+
 .nav-bar {
     opacity:0.8;
     border: 1px solid #cccccc;
@@ -12,6 +16,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 0px 20px #000000;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 
@@ -27,7 +32,6 @@ body {
 
 .nav-item {
     color: #777777;
-    font-family: 'Open Sans Condensed', sans-serif;
     padding-top:5px;
     padding-bottom:5px;
     padding-right:10px;
@@ -58,6 +62,7 @@ a.nav-item:visited {
 }
 
 a.nav-item:active {
+    border: 0;
     background-color:white;
     text-decoration: none;
     color: #777777;

@@ -1,11 +1,12 @@
 body {
     background-image: url('img/tweed_@2X.png');
-    overflow:hidden
+    overflow: hidden;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 /* Removes ugly dotted outline for links in Firefox */
-a:focus { 
-    outline: none; 
+a:focus {
+    outline: none;
 }
 
 .nav-bar {
@@ -13,16 +14,12 @@ a:focus {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    position:absolute;
-    left:0;
-    right:0;
-    z-index:10;
-    opacity:0.8;
+
+    opacity: 0.8;
     box-shadow: 0px 0px 20px #000000;
     border-radius: 5px;
     border: 1px solid #cccccc;
     background: #eeeeee;
-    font-family: 'Open Sans Condensed', sans-serif;
 }
 
 .nav-links {
@@ -33,23 +30,21 @@ a:focus {
 
 a.nav-item {
     color: #777777;
-    padding-top:5px;
-    padding-bottom:5px;
-    padding-right:10px;
-    padding-left:10px;
+    padding: 5px 10px;
     vertical-align: middle;
     font-size: 150%;
 }
 
-
-a.nav-item:link, a.nav-item:visited, a.page-item:link, a.page-item:visited {
-    text-decoration:none;
+a.nav-item:link,a.nav-item:visited,a.page-item:link,a.page-item:visited
+    {
+    text-decoration: none;
     color: #777777;
 }
 
-a.nav-item:hover, a.nav-item:active, a.page-item:hover, a.page-item:active, .active {
+a.nav-item:hover,a.nav-item:active,a.page-item:hover,a.page-item:active,.active
+    {
     opacity: 1;
-    background-color:white;
+    background-color: white;
     text-decoration: none;
     color: #777777;
     border-radius: 3px;
@@ -62,7 +57,6 @@ a.nav-item:hover, a.nav-item:active, a.page-item:hover, a.page-item:active, .act
     margin: 0;
     padding: 0;
     text-align: center;
-    /*see if you can remove this*/
     position: absolute;
     display: table;
 }
@@ -75,23 +69,29 @@ a.nav-item:hover, a.nav-item:active, a.page-item:hover, a.page-item:active, .act
 .centerh {
     width: 100%;
     margin-left: auto;
-    margin-right: auto; 
+    margin-right: auto;
     height: auto;
     float: left;
     display: inline-block;
 }
 
-a.page-item {
+.page-item {
     display: inline-block;
-    margin:20px;
-    width:30%;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 100%;
+    margin: 20px;
     opacity: 0.8;
     padding: 20px;
-    background-color:white;
+    background-color: white;
     text-decoration: none;
     color: #777777;
     border-radius: 3px;
     box-shadow: 0px 0px 20px #000000;
+    font-size: 100%;
+}
+
+a.page-item {
+    width: 35%;
+}
+
+div.page-item {
+    width: 60%;
 }

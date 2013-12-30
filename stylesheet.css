@@ -10,12 +10,9 @@ a:focus {
 }
 
 .nav-bar {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto;
     width: 80%;
     opacity: 0.8;
-    box-shadow: 0px 0px 20px #000000;
     border-radius: 5px;
     border: 1px solid #cccccc;
     background: #eeeeee;
@@ -36,16 +33,21 @@ a.nav-item {
 
 a.nav-item:link, a.nav-item:visited, a.page-item:link, a.page-item:visited {
     text-decoration: none;
-    color: #777777;
 }
 
 a.nav-item:hover, a.nav-item:active, a.page-item:hover, a.page-item:active, .active {
     opacity: 1;
     background-color: white;
     text-decoration: none;
-    color: #777777;
     border-radius: 3px;
+}
+
+a.nav-item:hover, a.nav-item:active, .active {
     box-shadow: 0px 0px 20px #000000;
+}
+
+a.page-item:hover, a.page-item:active{
+    box-shadow: 0px 0px 20px #ffffff;
 }
 
 .page-content {
@@ -83,13 +85,13 @@ a.nav-item:hover, a.nav-item:active, a.page-item:hover, a.page-item:active, .act
     text-decoration: none;
     color: #777777;
     border-radius: 3px;
-    box-shadow: 0px 0px 20px #000000;
     font-size: 100%;
 }
 
 a.page-item {
     height: 150px;
     width: 400px;
+    box-shadow: 0px 0px 10px #000000;
 }
 
 .ac {

@@ -57,7 +57,7 @@ a.page-item:hover, a.page-item:active{
 }
 
 .page-content {
-    height: 90%;
+    height: 80%;
     width: 99%;
     margin: 0;
     padding: 0;
@@ -109,4 +109,8 @@ a.page-item {
 
 .ar {
     text-align: right;
+}
+
+.aj {
+    text-align: justify;
 }

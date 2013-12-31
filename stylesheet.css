@@ -1,6 +1,6 @@
 body {
     background-image: url('img/tweed_@2X.png');
-    overflow: auto; /*was hidden*/
+    overflow: auto;
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
@@ -10,15 +10,15 @@ a:focus {
 }
 
 .nav-bar {
-    width: 80%;
-    margin: 10px 0 0 -40%;
-    left: 50%;
     position: fixed;
     z-index: 1;
-    opacity: 0.8;
+    width: 80%;
+    left: 50%;
+    margin: 10px 0 0 -40%;
     border-radius: 5px;
     border: 1px solid #cccccc;
     background: white;
+    opacity: 0.8; 
 }
 
 .nav-links {
@@ -27,28 +27,38 @@ a:focus {
 }
 
 a.nav-item {
-    color: #777777;
-    padding: 5px 10px;
     vertical-align: middle;
+    padding: 5px 10px;
+    color: #777777;
     font-size: 150%;
 }
 
-a.nav-item:link, a.nav-item:visited, a.page-item:link, a.page-item:visited {
+a.nav-item:link,
+a.nav-item:visited,
+a.page-item:link,
+a.page-item:visited {
     text-decoration: none;
 }
 
-a.nav-item:hover, a.nav-item:active, a.page-item:hover, a.page-item:active, .active {
-    opacity: 1;
-    background-color: white;
-    text-decoration: none;
+.active,
+a.nav-item:hover,
+a.nav-item:active,
+a.page-item:hover,
+a.page-item:active {
     border-radius: 3px;
+    background-color: white;
+    opacity: 1;
+    text-decoration: none;
 }
 
-a.nav-item:hover, a.nav-item:active, .active {
+.active,
+a.nav-item:hover,
+a.nav-item:active {
     box-shadow: 0px 0px 20px #000000;
 }
 
-a.page-item:hover, a.page-item:active{
+a.page-item:hover, 
+a.page-item:active {
     box-shadow: 0px 0px 20px #ffffff;
 }
 
@@ -57,13 +67,12 @@ a.page-item:hover, a.page-item:active{
 }
 
 .page-content {
+    display: table;
+    position: absolute;
     height: 80%;
     width: 99%;
     margin: 0;
-    padding: 0;
-    position: absolute;
-    display: table;
-    padding-top: 100px;
+    padding-top: 75px;
 }
 
 .centerv {
@@ -72,25 +81,25 @@ a.page-item:hover, a.page-item:active{
 }
 
 .centerh {
+    float: left;
     width: 100%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
-    height: auto;
-    float: left;
     overflow: hidden;
 }
 
 .page-item {  
     display: inline-block;
-    overflow: auto;
     margin:20px;
     padding:20px;
-    opacity: 0.8;
-    background-color: white;
-    text-decoration: none;
-    color: #777777;
     border-radius: 3px;
+    background-color: white;
+    opacity: 0.8;
     font-size: 100%;
+    color: #777777;
+    text-decoration: none;
+    overflow: auto;
 }
 
 a.page-item {

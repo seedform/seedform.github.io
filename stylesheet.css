@@ -1,6 +1,6 @@
 body {
     background-image: url('img/tweed_@2X.png');
-    overflow: hidden;
+    overflow: auto; /*was hidden*/
     font-family: 'Open Sans Condensed', sans-serif;
 }
 
@@ -10,8 +10,11 @@ a:focus {
 }
 
 .nav-bar {
-    margin: 20px auto;
     width: 80%;
+    margin: 10px 0 0 -40%;
+    left: 50%;
+    position: fixed;
+    z-index: 1;
     opacity: 0.8;
     border-radius: 5px;
     border: 1px solid #cccccc;
@@ -21,7 +24,6 @@ a:focus {
 .nav-links {
     margin-left: auto;
     margin-right: auto;
-    text-align: center;
 }
 
 a.nav-item {
@@ -50,14 +52,18 @@ a.page-item:hover, a.page-item:active{
     box-shadow: 0px 0px 20px #ffffff;
 }
 
+.active {
+    font-weight: bold;
+}
+
 .page-content {
     height: 90%;
     width: 99%;
     margin: 0;
     padding: 0;
-    text-align: center;
     position: absolute;
     display: table;
+    padding-top: 100px;
 }
 
 .centerv {
@@ -67,7 +73,6 @@ a.page-item:hover, a.page-item:active{
 
 .centerh {
     width: 100%;
-    height: 10%;
     margin-left: auto;
     margin-right: auto;
     height: auto;
@@ -89,8 +94,8 @@ a.page-item:hover, a.page-item:active{
 }
 
 a.page-item {
-    height: 150px;
-    width: 400px;
+    height: 180px;
+    width: 180px;
     box-shadow: 0px 0px 10px #000000;
 }
 

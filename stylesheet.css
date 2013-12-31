@@ -18,7 +18,7 @@ a:focus {
     opacity: 0.8;
     border-radius: 5px;
     border: 1px solid #cccccc;
-    background: #eeeeee;
+    background: white;
 }
 
 .nav-links {

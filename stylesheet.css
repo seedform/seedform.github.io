@@ -46,6 +46,11 @@ a:focus {
     border-radius: 5px;
     border:1px solid #ddd;
     background: white;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 
 .nav-links {
@@ -97,7 +102,7 @@ a.page-item:active {
     min-height: 80%;
     width: 100%;
     background-image: url('img/diagonal-noise.png');
-    box-shadow: 0px 0px 20px #777777;
+    box-shadow: 0px 0px 10px #777777 inset;
 }
 
 .centerv {

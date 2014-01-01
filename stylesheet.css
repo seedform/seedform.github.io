@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url('img/tweed_@2X.png');
+    background-image: url('img/diagonal-noise.png');
     overflow: auto;
     font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -77,7 +77,7 @@ a.page-item:active {
 .active,
 a.nav-item:hover,
 a.nav-item:active {
-    box-shadow: 0px 0px 20px black;
+    box-shadow: 0px 0px 20px #aaaaaa;
 }
 
 a.page-item:hover, 
@@ -117,7 +117,8 @@ a.page-item:active {
     margin:20px;
     padding:20px;
     border-radius: 5px;
-    background-color: #dedede;
+    
+    background-color: #ffffff;
     font-size: 100%;
     color: #777777;
     text-decoration: none;
@@ -127,7 +128,7 @@ a.page-item:active {
 a.page-item {
     height: 180px;
     width: 180px;
-    box-shadow: 0px 0px 10px #000000;
+    box-shadow: 0px 0px 10px #aaaaaa;
 }
 
 .ac {

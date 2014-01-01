@@ -9,8 +9,8 @@
 
     <script type="text/javascript">
         function toCharCode() {
-            text = document.getElementById("in").value;
-            converted = "";
+            var text = document.getElementById("in").value;
+            var converted = "";
             for (var i = 0; i < text.length; i++) {
                 converted = converted + "&#38;&#35;" + text.charCodeAt(i) + "&#59;";
             }

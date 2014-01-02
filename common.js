@@ -3,7 +3,7 @@ function nav() {
     document.write(
         "<div class=\"nav-bar\">" +
             "<div class=\"nav-links ac\">" +
-                "<a class=\"nav-item " + (page == "" ? "active" : "") + "\" href=\"http://seedform.github.io/\">PROJECTS</a>" +
+                "<a class=\"nav-item " + (page == "/" ? "active" : "") + "\" href=\"http://seedform.github.io/\">PROJECTS</a>" +
                 "<a class=\"nav-item " + (page == "about" ? "active" : "") + "\" href=\"about.html\">ABOUT</a>" +
                 "<a class=\"nav-item " + (page == "contact" ? "active" : "") + "\" href=\"contact.html\">CONTACT</a>" +
             "</div>" +

@@ -1,10 +1,10 @@
 function nav() {
     var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1, location.pathname.lastIndexOf("."));
     document.write(
-        "<div class=\"nav-bar\">" +
-            "<div class=\"nav-links ac\">" +
-                "<a class=\"nav-item " + (page == "/" ? "active" : "") + "\" href=\"http://seedform.github.io/\">PROJECTS</a>" +
-                "<a class=\"nav-item " + (page == "about" ? "active" : "") + "\" href=\"about.html\">ABOUT</a>" +
+        "<div id=\"nav-bar\">" +
+            "<div id=\"nav-links\" class=\"ac\">" +
+                "<a class=\"nav-item " + (page == "/" ? "active" : "") + "\" href=\"http://seedform.github.io/\">PROJECTS</a>" + " | " +
+                "<a class=\"nav-item " + (page == "about" ? "active" : "") + "\" href=\"about.html\">ABOUT</a>" + " | " + 
                 "<a class=\"nav-item " + (page == "contact" ? "active" : "") + "\" href=\"contact.html\">CONTACT</a>" +
             "</div>" +
         "</div>"
@@ -14,17 +14,18 @@ function nav() {
 function footer() {
     document.write(
         "<footer>" +
+            "<hr>" +
             "<div style=\"margin-bottom: 6px;\">" +
                 "<a href=\"https://github.com/seedform\" class=\"text-link\">" +
                     "<img src=\"img/GitHub-Mark-32px.png\" style=\"vertical-align: middle;\"/>" +
                     "<span style=\"vertical-align: middle;\">&nbsp;&nbsp;&nbsp;Visit my GitHub profile</span>" +
                 "</a>" +
             "</div>" +
+            "<hr>" +
             "&#169; " + new Date().getFullYear() + " Shudmanul Chowdhury" +
         "</footer>"
     );
 }
-
 
 //Taken from http://jsfiddle.net/vincentieo/6K9SZ/
 // The speed of one transition (fadeIn or fadeOut).

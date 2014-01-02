@@ -42,9 +42,25 @@ button:active {
     color: #aaaaaa;
 }
 
-/* Removes ugly dotted outline for links in Firefox */
+button,
+a.nav-item,
+a.text-link,
+a.page-item {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Removes dotted outline for links in Firefox */
 a:focus {
     outline: none;
+}
+
+/* Removes border in IE */
+a, img {
+    border:none;
 }
 
 .nav-bar {

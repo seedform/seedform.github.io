@@ -3,7 +3,7 @@
 }
 
 body {
-    background-image: url('img/p6.png');
+    background-image: url('img/bbg.png');
     overflow: auto;
     font-family: 'Open Sans Condensed', sans-serif;
 }
@@ -13,6 +13,13 @@ html, body {
     height: 98%;
     margin: 0;
     padding: 0;
+}
+
+footer {
+    padding: 10px 0;
+    color: #777777;
+    text-align: center;
+    font-size:80%;
 }
 
 button {
@@ -60,7 +67,7 @@ a:focus {
 
 a.nav-item {
     vertical-align: middle;
-    padding: 5px 10px;
+    padding: 0px 10px;
     color: #777777;
     font-size: 150%;
 }
@@ -85,7 +92,7 @@ a.page-item:active {
 .active,
 a.nav-item:hover,
 a.nav-item:active {
-    box-shadow: 0px 0px 20px #777777;
+    box-shadow: 0px 0px 10px #aaa;
 }
 
 a.page-item:hover, 
@@ -99,10 +106,10 @@ a.page-item:active {
 
 .page-content {
     display: table;
-    min-height: 80%;
+    height: 500px;
     width: 100%;
-    background-image: url('img/diagonal-noise.png');
-    box-shadow: 0px 0px 10px #777777 inset;
+    background-image: url('img/pcbg-dl.png');
+    box-shadow: 0px 0px 10px #999999 inset;
 }
 
 .centerv {

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script src="common.js"></script>
 
     <script type="text/javascript">
         function toCharCode() {
@@ -25,13 +26,7 @@
 <body>
     
     <!-- Navigation -->
-    <div class="nav-bar">
-        <div class="nav-links ac">
-            <a class="nav-item" href="http://seedform.github.io/">PROJECTS</a>
-            <a class="nav-item" href="about.html">ABOUT</a>
-            <a class="nav-item" href="contact.html">CONTACT</a>
-        </div>
-    </div>
+    <script>nav();</script>
     
     <!-- Page items -->
     <div class="page-content ac">
@@ -54,9 +49,8 @@
         </div>
     </div>
     
-    <footer>
-        &#169; <?php echo date("Y"); ?> Shudmanul Chowdhury
-    </footer>
+    <!-- Footer -->
+    <script>footer();</script>
     
 </body>
 

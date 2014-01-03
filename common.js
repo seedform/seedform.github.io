@@ -26,6 +26,7 @@ function footer() {
 }
 
 document.write(
+    '<link rel="shortcut icon" href="img/icon.png">' +
     '<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8"/>' +
     '<link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700" rel="stylesheet" type="text/css">' +
     '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />' +

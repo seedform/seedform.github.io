@@ -15,7 +15,7 @@ function footer() {
             '<hr>' +
             '<div style="margin-bottom: 6px;">' +
                 '<a href="https://github.com/seedform" class="text-link">' +
-                    '<img src="img/GitHub-Mark-32px.png" style="vertical-align: middle;"/>' +
+                    '<img src="img/GitHub-Mark-120px-plus.png" style="width:32px; height:32px; vertical-align:middle;"/>' +
                     '<span style="vertical-align: middle;">&nbsp;&nbsp;&nbsp;Visit my GitHub profile</span>' +
                 '</a>' +
             '</div>' +
@@ -29,8 +29,7 @@ document.write(
     '<link rel="shortcut icon" href="img/icon.png">' +
     '<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8"/>' +
     '<link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700" rel="stylesheet" type="text/css">' +
-    '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />' +
-    '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>'
+    '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />'
 );
 
 // Fading transition, taken from http://jsfiddle.net/vincentieo/6K9SZ/

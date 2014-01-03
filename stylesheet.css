@@ -188,8 +188,6 @@ a.text-link:active {
 }
 
 .centerh {
-    float: left;
-    width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;

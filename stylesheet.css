@@ -135,10 +135,8 @@ button.regular-button:active {
     color: #aaaaaa;
 }
 
-button.regular-button,
-a.nav-item,
-a.text-link,
-a.page-item {
+a,
+button {
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -182,7 +180,7 @@ a.page-item:active {
 
 a.text-link:hover,
 a.text-link:active {
-    color: #bbb;
+    opacity: 0.7;
 }
 
 /* Positioning

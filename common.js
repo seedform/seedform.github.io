@@ -22,7 +22,7 @@ function footer() {
                     '<img src="img/Twitter_logo_blue.png" style="width:32px; height:32px; vertical-align:middle;"/>' +
                 '</a>' +
                 '&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;' +
-                '<a href="https://plus.google.com/u/0/108831680097190194078/posts" title="Follow me on Google+" class="text-link">' +
+                '<a href="https://plus.google.com/u/0/108831680097190194078/posts" title="Add me on Google+" class="text-link">' +
                     '<img src="img/Red-signin-Small-base-44dp.png" style="width:36px; height:36px; vertical-align:middle;"/>' +
                 '</a>' +
             '</div>' +

@@ -76,8 +76,6 @@ a.nav-item {
 #############################################################
 */
 .page-content {
-    display: table;
-    height: 510px;
     padding: 20px 0px;
     width: 100%;
     background-image: url('img/pcbg-dl.png');
@@ -104,11 +102,6 @@ a.page-item {
     box-shadow: 0px 0px 10px #aaaaaa;
     -webkit-box-shadow: 0px 0px 10px #aaaaaa;
     -moz-box-shadow: 0px 0px 10px #aaaaaa;
-}
-
-.centerv {
-    display: table-cell;
-    vertical-align: middle;
 }
 
 .centerh {

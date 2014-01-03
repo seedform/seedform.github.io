@@ -1,12 +1,10 @@
 function nav() {
     var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1, location.pathname.lastIndexOf("."));
     document.write(
-        "<div id=\"nav-bar\">" +
-            "<div id=\"nav-links\" class=\"ac\">" +
+        "<div id=\"nav-bar\" class=\"ac\">" +
                 "<a class=\"nav-item " + (page == "/" ? "active" : "") + "\" href=\"http://seedform.github.io/\">PROJECTS</a>" + " | " +
                 "<a class=\"nav-item " + (page == "about" ? "active" : "") + "\" href=\"about.html\">ABOUT</a>" + " | " + 
                 "<a class=\"nav-item " + (page == "contact" ? "active" : "") + "\" href=\"contact.html\">CONTACT</a>" +
-            "</div>" +
         "</div>"
     );
 }

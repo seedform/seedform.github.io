@@ -13,10 +13,17 @@ function footer() {
     document.write(
         '<footer>' +
             '<hr>' +
-            '<div style="margin-bottom: 6px;">' +
-                '<a href="https://github.com/seedform" class="text-link">' +
+            '<div style="margin-bottom: 6px; font-size:120%;">' +
+                '<a href="https://github.com/seedform" title="Visit my GitHub profile" class="text-link">' +
                     '<img src="img/GitHub-Mark-120px-plus.png" style="width:32px; height:32px; vertical-align:middle;"/>' +
-                    '<span style="vertical-align: middle;">&nbsp;&nbsp;&nbsp;Visit my GitHub profile</span>' +
+                '</a>' +
+                '&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;' +
+                '<a href="https://twitter.com/seedform" title="Follow me on Twitter" class="text-link">' +
+                    '<img src="img/Twitter_logo_blue.png" style="width:32px; height:32px; vertical-align:middle;"/>' +
+                '</a>' +
+                '&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;' +
+                '<a href="https://plus.google.com/u/0/108831680097190194078/posts" title="Follow me on Google+" class="text-link">' +
+                    '<img src="img/Red-signin-Small-base-44dp.png" style="width:36px; height:36px; vertical-align:middle;"/>' +
                 '</a>' +
             '</div>' +
             '<hr>' +

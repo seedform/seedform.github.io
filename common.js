@@ -1,3 +1,11 @@
+function fixLayout() {
+    if ($(window).height() < 600) {
+        $('#foot').css({ position: 'relative' });
+    } else {
+        $('#foot').css({ position: 'fixed' });
+    }
+}
+
 document.write(
     '<link rel="shortcut icon" href="img/icon.png">' +
     '<link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8"/>' +
@@ -56,4 +64,9 @@ $(document).ready(function() {
         $('a').attr('target','_blank');
     });
     
+    $(window).resize(function() {
+        fixLayout();
+    });
+    
+    fixLayout();
 });

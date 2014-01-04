@@ -91,6 +91,8 @@ a.nav-item {
     color: #777777;
     text-decoration: none;
     overflow: auto;
+    vertical-align: middle;
+    *display: inline;
 }
 
 a.page-item {

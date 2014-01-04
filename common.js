@@ -1,8 +1,10 @@
 function fixLayout() {
     if ($(window).height() < 600) {
-        $('#foot').css({ position: 'relative' });
+        $('#foot').css('position', 'static');
+        $('#page-content').css('padding-bottom', '20px');
     } else {
-        $('#foot').css({ position: 'fixed' });
+        $('#foot').css('position', 'fixed');
+        $('#page-content').css('padding-bottom', '130px');
     }
 }
 
@@ -47,13 +49,13 @@ $(document).ready(function() {
     
     // Fading transition, taken from http://jsfiddle.net/vincentieo/6K9SZ/
     var speed = 'medium';
-    $('.page-content').hide();
-    $('.page-content').fadeIn(speed, function() {
+    $('#page-content').hide();
+    $('#page-content').fadeIn(speed, function() {
         $('a.nav-item').click(function(event) {
             var url = $(this).attr('href');
             if (url.indexOf('#') == 0 || url.indexOf('javascript:') == 0) return;
             event.preventDefault();
-            $('.page-content').fadeOut(speed, function() {
+            $('#page-content').fadeOut(speed, function() {
                 window.location = url;
             });
         });
@@ -64,9 +66,9 @@ $(document).ready(function() {
         $('a').attr('target','_blank');
     });
     
+    // Sets the footer position based on screen height after a window size change
     $(window).resize(function() {
         fixLayout();
     });
-    
-    fixLayout();
+
 });

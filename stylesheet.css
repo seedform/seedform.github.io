@@ -2,8 +2,7 @@
 #############################################################
 */
 body {
-    background-color: #e2e2e2;
-    background-image: url('img/pcbg-dl.png');
+    background: url('img/pcbg-dl.png') repeat scroll 0 0 #e2e2e2;
     overflow: auto;
     font-family: 'Open Sans Condensed', sans-serif;
 }

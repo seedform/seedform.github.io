@@ -14,13 +14,6 @@ html, body {
     padding: 0;
 }
 
-footer {
-    padding: 10px 0;
-    color: #777777;
-    text-align: center;
-    font-size:80%;
-}
-
 hr {
     border: 0;
     height: 1px;
@@ -41,6 +34,11 @@ a, img {
     border:none;
 }
 
+noscript {
+    text-align: center;
+    color: #cc0000;
+}
+
 #container {
     width:100%;
 }
@@ -48,14 +46,9 @@ a, img {
 /* Navigation
 #############################################################
 */
-#nav-bar {
+#nav {
     width: 80%;
     margin: 20px auto;
-    /*
-    border-radius: 5px;
-    border:1px solid #ddd;
-    background: white;
-    */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -110,6 +103,16 @@ a.page-item {
     margin-right: auto;
     overflow: hidden;
     max-width: 1104px;
+}
+
+/* Footer
+#############################################################
+*/
+#foot {
+    padding: 10px 0;
+    color: #777777;
+    text-align: center;
+    font-size:80%;
 }
 
 /* Buttons
@@ -188,7 +191,6 @@ a.text-link:active {
 /* Positioning
 #############################################################
 */
-
 .ac {
     text-align: center;
 }

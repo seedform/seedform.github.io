@@ -47,17 +47,14 @@ $(document).ready(function() {
         '&#169; ' + new Date().getFullYear() + ' Shudmanul Chowdhury'
     );
     
-    // Fading transition, taken from http://jsfiddle.net/vincentieo/6K9SZ/
-    var speed = 'medium';
-    $('#page-content').hide();
-    $('#page-content').fadeIn(speed, function() {
-        $('a.nav-item').click(function(event) {
-            var url = $(this).attr('href');
-            if (url.indexOf('#') == 0 || url.indexOf('javascript:') == 0) return;
-            event.preventDefault();
-            $('#page-content').fadeOut(speed, function() {
-                window.location = url;
-            });
+
+    $('#page-content').css('display', 'none');
+    $('#page-content').fadeIn(250);
+    $('a.nav-item').click(function(event) {
+        event.preventDefault();
+        newLocation = this.href;
+        $('#page-content').fadeOut(250, function () {
+            window.location = newLocation;
         });
     });
     

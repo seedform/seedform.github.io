@@ -10,9 +10,11 @@ $(document).ready(function() {
     // Writes the nav-bar to the page
     var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1, location.pathname.lastIndexOf("."));
     $("#nav").html(
-        '<a class="nav-item ' + (page == '/' ? 'active' : '') + '" href="http://seedform.github.io/">PROJECTS</a>' + ' | ' +
-        '<a class="nav-item ' + (page == 'about' ? 'active' : '') + '" href="about.html">ABOUT</a>' + ' | ' + 
-        '<a class="nav-item ' + (page == 'contact' ? 'active' : '') + '" href="contact.html">CONTACT</a>'
+        '<div class="vac">' +
+            '<a class="nav-item ' + (page == '/' ? 'active' : '') + '" href="http://seedform.github.io/">PROJECTS</a>' + ' | ' +
+            '<a class="nav-item ' + (page == 'about' ? 'active' : '') + '" href="about.html">ABOUT</a>' + ' | ' + 
+            '<a class="nav-item ' + (page == 'contact' ? 'active' : '') + '" href="contact.html">CONTACT</a>' +
+        '</div>'
     );
 
     // Writes the footer to the page
@@ -37,13 +39,13 @@ $(document).ready(function() {
     
     // Fading transition, taken from http://jsfiddle.net/vincentieo/6K9SZ/
     var speed = 'medium';
-    $('html, body').hide();
-    $('html, body').fadeIn(speed, function() {
+    $('.page-content').hide();
+    $('.page-content').fadeIn(speed, function() {
         $('a.nav-item').click(function(event) {
             var url = $(this).attr('href');
             if (url.indexOf('#') == 0 || url.indexOf('javascript:') == 0) return;
             event.preventDefault();
-            $('html, body').fadeOut(speed, function() {
+            $('.page-content').fadeOut(speed, function() {
                 window.location = url;
             });
         });

@@ -1,5 +1,5 @@
 function fixLayout() {
-    if ($(window).height() < 600) {
+    if ($(window).height() < 600 && $(window).height() < $(document).height()) {
         $('#foot').css('position', 'static');
         $('#page-content').css('padding-bottom', '20px');
     } else {
@@ -44,7 +44,7 @@ $(document).ready(function() {
             '</a>' +
         '</div>' +
         '<hr>' +
-        '&#169; ' + new Date().getFullYear() + ' Shudmanul Chowdhury'
+        'Copyright &#169; ' + new Date().getFullYear() + ' Shudmanul Chowdhury'
     );
     
 

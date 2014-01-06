@@ -1,20 +1,16 @@
-function fixFoot() {
-    if ($(window).width() < 650) {
-        $('#foot').css('position', 'static');
-        $('#page-content').css('padding-bottom', '20px');
-    } else {
-        $('#foot').css('position', 'fixed');
-        $('#page-content').css('padding-bottom', '130px');
-    }
-}
+var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1, location.pathname.lastIndexOf("."));
+var prev = document.referrer == '' ? '/' : document.referrer.substring(document.referrer.lastIndexOf('/') + 1, document.referrer.lastIndexOf('.'));
 
-$(document).ready(function() {
-    
+var index   = 'http://www.shudman.com/';
+var about   = 'http://www.shudman.com/about.html';
+var contact = 'http://www.shudman.com/contact.html';
+
+function navFoot() {
+
     // Write the nav-bar to the page
-    var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1, location.pathname.lastIndexOf("."));
     $("#nav").html(
        '<div class="vac"> \
-            <a class="nav-item ' + (page == '/' ? 'active' : '') + '" href="index.html">PROJECTS</a>&nbsp;|&nbsp; \
+            <a class="nav-item ' + (page == '/' ? 'active' : '') + '" href="http://www.shudman.com/">PROJECTS</a>&nbsp;|&nbsp; \
             <a class="nav-item ' + (page == 'about' ? 'active' : '') + '" href="about.html">ABOUT</a>&nbsp;|&nbsp; \
             <a class="nav-item ' + (page == 'contact' ? 'active' : '') + '" href="contact.html">CONTACT</a> \
         </div>'
@@ -39,28 +35,57 @@ $(document).ready(function() {
         <hr> \
         Copyright &#169; ' + new Date().getFullYear() + ' Shudmanul Chowdhury'
     );
+}
+
+// Set the footer position to be static or fixed based on screen size
+function fixFoot() {
+    if ($(window).width() < 650) {
+        $('#foot').css('position', 'static');
+        $('#page-content').css('padding-bottom', '20px');
+    } else {
+        $('#foot').css('position', 'fixed');
+        $('#page-content').css('padding-bottom', '130px');
+    }
+}
+
+// Set transition animations
+function setAnimation() {
+    var animIn, animOut;
     
-    // Fading transition
-    //$('#page-content').css('display', 'none');
-    //$('#page-content').fadeIn(250);
-    $('#page-content').addClass('up-fade-in');
+    if (prev == '' || prev == '/' || pref == 'about' && page == 'contact') animIn='left-fade-in';
+    else if (prev == 'contact' || prev == 'about' && page == '/') animIn='right-fade-in';
+    
+    $('#page-content').addClass(animIn);
     $('a.nav-item').click(function(event) {
         event.preventDefault();
         newLocation = this.href;
         $('#page-content').addClass('down-fade-out');
+        
         setTimeout(function() {window.location = newLocation}, 250);
     });
-    
-    // Set all non-navigation links to open in a new tab
+}
+
+// Set all non-navigation links to open in a new tab
+function setLinkTargets() {
     $('a:not(".nav-item")').click(function(event) {
         $('a').attr('target','_blank');
     });
-    
-    // Set the footer position based on screen height after a window size change
-    $(window).resize(function() {
-        fixFoot();
-    });
+}
 
+$(document).ready(function() {
+    
+    navFoot();
     fixFoot();
+    setAnimation();
+    setLinkTargets();
+    
+    
+    
+//    // Set the footer position based on screen height after a window size change
+//    $(window).resize(function() {
+//        fixFoot();
+//    });
+
+    
     
 });

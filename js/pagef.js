@@ -52,7 +52,7 @@ function fixFoot() {
 function setAnimation() {
     var animIn, animOut;
     
-    if (prev == '' || prev == '/' || pref == 'about' && page == 'contact') animIn='left-fade-in';
+    if (prev == '' || prev == '/' || prev == 'about' && page == 'contact') animIn='left-fade-in';
     else if (prev == 'contact' || prev == 'about' && page == '/') animIn='right-fade-in';
     
     $('#page-content').addClass(animIn);

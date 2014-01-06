@@ -1,4 +1,5 @@
-var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1, location.pathname.lastIndexOf("."));
+var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+alert(page);
 var prev = document.referrer == '' ? '/' : document.referrer.substring(document.referrer.lastIndexOf('/') + 1, document.referrer.lastIndexOf('.'));
 
 var index   = 'http://www.shudman.com/';

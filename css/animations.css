@@ -5,9 +5,9 @@
 
     from {
         opacity: 0;
-        transform: translateX(-50px);
-        -ms-transform: translateX(-50px);
-        -webkit-transform: translateX(-50px);
+        transform: translateX(50px);
+        -ms-transform: translateX(50px);
+        -webkit-transform: translateX(50px);
     }
 
     to {
@@ -23,8 +23,8 @@
 
     from {
         opacity: 0;
-        transform: translateX(-50px);
-        -webkit-transform: translateX(-50px);
+        transform: translateX(50px);
+        -webkit-transform: translateX(50px);
     }
 
     to {
@@ -46,9 +46,9 @@
 
     from {
         opacity: 0;
-        transform: translateX(50px);
-        -ms-transform: translateX(50px);
-        -webkit-transform: translateX(50px);
+        transform: translateX(-50px);
+        -ms-transform: translateX(-50px);
+        -webkit-transform: translateX(-50px);
     }
 
     to {
@@ -64,8 +64,8 @@
 
     from {
         opacity: 0;
-        transform: translateX(50px);
-        -webkit-transform: translateX(50px);
+        transform: translateX(-50px);
+        -webkit-transform: translateX(-50px);
     }
 
     to {

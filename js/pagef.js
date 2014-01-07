@@ -64,15 +64,15 @@ function fixFoot() {
 // Set transition animations
 function setAnimation() {
     var animIn, animOut;
-    if (page == pages[0] || pages.indexOf(page) < pages.indexOf(prev)) animIn='right-fade-in';
-    else if (page == pages[pages.length - 1] || pages.indexOf(page) > pages.indexOf(prev)) animIn='left-fade-in';
+    if (pages.indexOf(page) < pages.indexOf(prev)) animIn='right-fade-in';
+    else if (pages.indexOf(page) > pages.indexOf(prev)) animIn='left-fade-in';
     
     $('#page-content').addClass(animIn);
     $('a.nav-item').click(function(event) {
         event.preventDefault();
         newLoc = this.href;
-        if (page == pages[0] || pages.indexOf(page) < pages.indexOf(newLoc)) animOut='left-fade-out';
-        else if (page == pages[pages.length - 1] || pages.indexOf(page) > pages.indexOf(newLoc)) animOut='right-fade-out';
+        if (pages.indexOf(page) > pages.indexOf(newLoc)) animOut='left-fade-out';
+        else if (pages.indexOf(page) < pages.indexOf(newLoc)) animOut='right-fade-out';
         
         $('#page-content').addClass(animOut);
         

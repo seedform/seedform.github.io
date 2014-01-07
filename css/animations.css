@@ -146,15 +146,15 @@
 @-webkit-keyframes right-fade-out {
 
     from {
-        opacity: 0;
-        transform: translateX(50px);
-        -webkit-transform: translateX(50px);
-    }
-
-    to {
         opacity: 1;
         transform: translateX(0);
         -webkit-transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(50px);
+        -webkit-transform: translateX(50px);
     }
     
 }

@@ -77,7 +77,7 @@ a.nav-item {
 */
 #page-content {
     padding-top: 90px;
-    padding-bottom: 130px;
+    padding-bottom: 110px;
     width: 100%;
     text-align: center;
 }
@@ -119,9 +119,9 @@ a.page-item {
     position: fixed;
     left:0px;
     bottom:0px;
-    height:90px;
+    height:70px;
     width: 100%;
-    padding: 10px 0px;
+    padding: 0px 0px;
     background-color: #f5f5f5;
     background-image: url('../img/hfbg.png');
     color: #777777;
@@ -130,6 +130,12 @@ a.page-item {
     box-shadow: 0px 0px 10px #999999;
     -webkit-box-shadow: 0px 0px 10px #999999;
     -moz-box-shadow: 0px 0px 10px #999999;
+}
+
+.footer-img-lnk {
+    width:20px; 
+    height:20px; 
+    vertical-align:middle;
 }
 
 /* Buttons

@@ -71,8 +71,8 @@ function setAnimation() {
     $('a.nav-item').click(function(event) {
         event.preventDefault();
         newLoc = this.href;
-        if (pages.indexOf(page) > pages.indexOf(newLoc)) animOut='left-fade-out';
-        else if (pages.indexOf(page) < pages.indexOf(newLoc)) animOut='right-fade-out';
+        if (pages.indexOf(page) < pages.indexOf(newLoc)) animOut='left-fade-out';
+        else if (pages.indexOf(page) > pages.indexOf(newLoc)) animOut='right-fade-out';
         
         $('#page-content').addClass(animOut);
         

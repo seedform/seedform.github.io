@@ -2,32 +2,32 @@
 #############################################################
 */
 body {
-    background: url('../img/pcbg-dl.png') repeat scroll 0 0 #e2e2e2;
-    font-family: 'Open Sans Condensed', sans-serif;
-    overflow-y: auto;
-    overflow-x: hidden;
+    background:url('../img/pcbg-dl.png') repeat scroll 0 0 #e2e2e2;
+    font-family:'Open Sans Condensed', sans-serif;
+    overflow-y:auto;
+    overflow-x:hidden;
 }
 
 html, body {
-    width: 100%;
-    height: 98%;
-    margin: 0;
-    padding: 0;
+    width:100%;
+    height:98%;
+    margin:0;
+    padding:0;
 }
 
 hr {
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(180,180,180,0.75), rgba(0,0,0,0));
-    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(180,180,180,0.75), rgba(0,0,0,0));
-    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(180,180,180,0.75), rgba(0,0,0,0));
-    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(180,180,180,0.75), rgba(0,0,0,0));
-    background-image:         linear-gradient(left, rgba(0,0,0,0), rgba(180,180,180,0.75), rgba(0,0,0,0));
+    border:0;
+    height:1px;
+    background-image:-webkit-linear-gradient(left, rgba(0,0,0,0), rgba(180,180,180,0.75), rgba(0,0,0,0));
+    background-image:   -moz-linear-gradient(left, rgba(0,0,0,0), rgba(180,180,180,0.75), rgba(0,0,0,0));
+    background-image:    -ms-linear-gradient(left, rgba(0,0,0,0), rgba(180,180,180,0.75), rgba(0,0,0,0));
+    background-image:     -o-linear-gradient(left, rgba(0,0,0,0), rgba(180,180,180,0.75), rgba(0,0,0,0));
+    background-image:        linear-gradient(left, rgba(0,0,0,0), rgba(180,180,180,0.75), rgba(0,0,0,0));
 }
 
 /* Removes the dotted outline for links in Firefox */
 a:focus {
-    outline: none;
+    outline:none;
 }
 
 /* Removes image-link border in IE */
@@ -36,8 +36,8 @@ a, img {
 }
 
 noscript {
-    text-align: center;
-    color: #cc0000;
+    text-align:center;
+    color:#c00;
 }
 
 #container {
@@ -48,88 +48,87 @@ noscript {
 #############################################################
 */
 #nav {
-    position: fixed;
-    display: table;
-    vertical-align: middle;
+    position:fixed;
+    display:table;
+    vertical-align:middle;
     left:0px;
     top:0px;
-    width: 100%;
-    height: 70px;
-    text-align: center;
-    background-color: #f5f5f5;
-    background-image: url('../img/hfbg.png');
-    box-shadow: 0px 0px 10px #999999;
-    -webkit-box-shadow: 0px 0px 10px #999999;
-    -moz-box-shadow: 0px 0px 10px #999999;
-    z-index: 1;
+    width:100%;
+    height:70px;
+    text-align:center;
+    background-color:#f5f5f5;
+    background-image:url('../img/hfbg.png');
+    box-shadow:0px 0px 10px #999;
+    -webkit-box-shadow:0px 0px 10px #999;
+    -moz-box-shadow:0px 0px 10px #999;
+    z-index:1;
 }
 
 a.nav-item {
-    vertical-align: middle;
-    padding: 0px 10px;
-    margin: 0px 2px;
-    color: #777777;
-    font-size: 150%;
+    vertical-align:middle;
+    padding:0px 10px;
+    margin:0px 2px;
+    color:#777;
+    font-size:150%;
 }
 
 /* Page content
 #############################################################
 */
 #page-content {
-    padding-top: 90px;
-    padding-bottom: 110px;
-    width: 100%;
-    text-align: center;
+    padding-top:90px;
+    padding-bottom:110px;
+    width:100%;
+    text-align:center;
 }
 
 .page-item {  
-    display: inline-block;
+    display:inline-block;
     margin:20px;
     padding:20px;
-    border-radius: 5px;
-    background: #ffffff;
-    font-size: 100%;
-    color: #777777;
-    text-decoration: none;
-    overflow: auto;
-    vertical-align: middle;
-    *display: inline;
+    border-radius:5px;
+    background:#ffffff;
+    font-size:100%;
+    color:#777;
+    text-decoration:none;
+    overflow:auto;
+    vertical-align:middle;
 }
 
 a.page-item {
-    height: 180px;
-    width: 180px;
-    box-shadow: 0px 0px 10px #aaaaaa;
-    -webkit-box-shadow: 0px 0px 10px #aaaaaa;
-    -moz-box-shadow: 0px 0px 10px #aaaaaa;
+    height:180px;
+    width:180px;
+    box-shadow:0px 0px 10px #aaaaaa;
+    -webkit-box-shadow:0px 0px 10px #aaaaaa;
+    -moz-box-shadow:0px 0px 10px #aaaaaa;
 }
 
 .centerh {
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    overflow: hidden;
-    max-width: 1104px;
+    height:auto;
+    margin-left:auto;
+    margin-right:auto;
+    overflow:hidden;
+    max-width:1088px;
 }
 
 /* Footer
 #############################################################
 */
 #foot {
-    position: fixed;
+    position:fixed;
     left:0px;
     bottom:0px;
     height:70px;
-    width: 100%;
-    padding: 0px 0px;
-    background-color: #f5f5f5;
-    background-image: url('../img/hfbg.png');
-    color: #777777;
-    text-align: center;
+    width:100%;
+    padding:0px 0px;
+    background-color:#f5f5f5;
+    background-image:url('../img/hfbg.png');
+    color:#777;
+    text-align:center;
     font-size:80%;
-    box-shadow: 0px 0px 10px #999999;
-    -webkit-box-shadow: 0px 0px 10px #999999;
-    -moz-box-shadow: 0px 0px 10px #999999;
+    box-shadow:0px 0px 10px #999;
+    -webkit-box-shadow:0px 0px 10px #999;
+    -moz-box-shadow:0px 0px 10px #999;
 }
 
 .footer-img-lnk {
@@ -142,15 +141,15 @@ a.page-item {
 #############################################################
 */
 button.regular-button {
-    margin: 5px;
-    padding: 5px 7px;
-    border:1px solid #999999;
-    border-radius: 5px;
-    background-color: #aaaaaa;
-    color: white;
+    margin:5px;
+    padding:5px 7px;
+    border:1px solid #999;
+    border-radius:5px;
+    background-color:#aaaaaa;
+    color:white;
     text-align:center;
     text-decoration:none;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family:'Open Sans Condensed', sans-serif;
     font-weight:bold;
     font-size:80%;
 }
@@ -160,17 +159,17 @@ button.regular-button {
 */
 button.regular-button:hover,
 button.regular-button:active {
-    background-color: #ffffff;
-    color: #aaaaaa;
+    background-color:#ffffff;
+    color:#aaaaaa;
 }
 
 a,
 button {
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    -ms-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
 }
 
 a.nav-item:link,
@@ -179,7 +178,7 @@ a.page-item:link,
 a.page-item:visited,
 a.text-link:link,
 a.text-link:visited {
-    text-decoration: none;
+    text-decoration:none;
 }
 
 .active,
@@ -187,56 +186,56 @@ a.nav-item:hover,
 a.nav-item:active,
 a.page-item:hover,
 a.page-item:active {
-    border-radius: 3px;
-    text-decoration: none;
+    border-radius:3px;
+    text-decoration:none;
 }
 
 .active,
 a.nav-item:hover,
 a.nav-item:active {
-    background-color: #cccccc;
-    color: white !important;
+    background-color:#cccccc;
+    color:white !important;
 }
 
 a.page-item:hover, 
 a.page-item:active {
-    box-shadow: 0px 0px 20px white;
-    -moz-box-shadow: 0px 0px 20px white;
-    -webkit-box-shadow: 0px 0px 20px white;
-    color: #aaaaaa !important;
+    box-shadow:0px 0px 20px white;
+    -moz-box-shadow:0px 0px 20px white;
+    -webkit-box-shadow:0px 0px 20px white;
+    color:#aaaaaa !important;
 }
 
 a.text-link:hover,
 a.text-link:active {
-    opacity: 0.7;
+    opacity:0.7;
 }
 
 /* Positioning
 #############################################################
 */
 .ac {
-    text-align: center;
+    text-align:center;
 }
 
 .al {
-    text-align: left;
+    text-align:left;
 }
 
 .ar {
-    text-align: right;
+    text-align:right;
 }
 
 .aj {
-    text-align: justify;
+    text-align:justify;
 }
 
 .vac-container {
-    display: table;
+    display:table;
 }
 
 .vac {
-    display: table-cell;
-    vertical-align: middle;
+    display:table-cell;
+    vertical-align:middle;
 }
 
 /* Misc styles
@@ -244,5 +243,21 @@ a.text-link:active {
 */
 a.text-link {
     text-decoration:none;
-    color: #777777;
+    color:#777;
+}
+
+.col2 {
+    width:504px;
+}
+
+.col3 {
+    width:354px;
+}
+
+.col2,
+.col3 {
+    display:inline-block;
+    font-size:100%;
+    color:#777;
+    vertical-align:top;
 }

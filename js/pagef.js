@@ -1,8 +1,8 @@
-var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+var page = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
 var prev = document.referrer.substring(document.referrer.lastIndexOf('/') + 1);
-alert(page);
-var navHrefs = new Array(
-    '/',
+
+var pages = new Array(
+    'projects.html',
     'about.html',
     'contact.html'
 );
@@ -31,14 +31,13 @@ var socTitles = new Array(
     'Adde me on Google+'
 );
 
-
 function navFoot() {
 
     // Write the nav-bar to the page
     var nav = '<div class="vac">';
-    for (var i = 0; i < navHrefs.length; i++) {
-        nav += '<a class="nav-item ' + (page == navHrefs[i] ? 'active' : '') + '" href="' + navHrefs[i] + '">' + navTitles[i] + '</a>';
-        nav += i < navHrefs.length - 1 ? '&nbsp;|&nbsp;' : '';
+    for (var i = 0; i < pages.length; i++) {
+        nav += '<a class="nav-item ' + (page == pages[i] ? 'active' : '') + '" href="' + pages[i] + '">' + navTitles[i] + '</a>';
+        nav += i < pages.length - 1 ? '&nbsp;|&nbsp;' : '';
     }
     $("#nav").html(nav + '</div>');
 
@@ -65,20 +64,19 @@ function fixFoot() {
 // Set transition animations
 function setAnimation() {
     var animIn, animOut;
-    if (page == navHrefs[0] || page == 'index.html') animIn='right-fade-in';
-    else if (page == navHrefs[2]) animIn='left-fade-in';
+    if (page == pages[0] || pages.indexOf(page) < pages.indexOf(prev)) animIn='right-fade-in';
+    else if (page == pages[pages.length - 1] || pages.indexOf(page) > pages.indexOf(prev)) animIn='left-fade-in';
     
     $('#page-content').addClass(animIn);
     $('a.nav-item').click(function(event) {
         event.preventDefault();
-        newLocation = this.href;
-        
-        if (page == navHrefs[0] || page == 'index.html') animOut='left-fade-out';
-        else if (page == navHrefs[2]) animOut='right-fade-out';
+        newLoc = this.href;
+        if (page == pages[0] || pages.indexOf(page) < pages.indexOf(newLoc)) animOut='left-fade-out';
+        else if (page == pages[pages.length - 1] || pages.indexOf(page) > pages.indexOf(newLoc)) animOut='right-fade-out';
         
         $('#page-content').addClass(animOut);
         
-        setTimeout(function() {window.location = newLocation}, 500);
+        setTimeout(function() { window.location = newLoc }, 300);
     });
 }
 
@@ -90,19 +88,13 @@ function setLinkTargets() {
 }
 
 $(document).ready(function() {
-    
     navFoot();
     fixFoot();
     setAnimation();
     setLinkTargets();
-    
-    
-    
-//    // Set the footer position based on screen height after a window size change
-//    $(window).resize(function() {
-//        fixFoot();
-//    });
 
-    
-    
+    // Set the footer position based on screen height after a window size change
+    $(window).resize(function() {
+        fixFoot();
+    });
 });

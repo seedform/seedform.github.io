@@ -1,6 +1,6 @@
 var page = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 var prev = document.referrer.substring(document.referrer.lastIndexOf('/') + 1);
-
+alert(page);
 var navHrefs = new Array(
     '/',
     'about.html',

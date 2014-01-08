@@ -100,8 +100,8 @@ $(document).ready(function() {
                 $('#page-content').addClass('right-fade-out');
                 goToDelayed(PAGES[page - 1]);
             }
-            
-        }
+        },
+        allowPageScroll:'vertical'
     });
-
+    
 });

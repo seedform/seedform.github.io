@@ -87,15 +87,16 @@ $(document).ready(function() {
     $('a:not(".nav-item")').click(function(event) {
         $('a').attr('target','_blank');
     });
-
-    Hammer('#page-content').on("swipeleft", function() {
+    
+    // Touch gestures
+    var element = document.getElementById('page-content');
+    Hammer(element).on("swipeleft", function() {
         $('#page-content').removeClass('left-fade-in right-fade-in');
         $('#page-content').addClass('left-fade-out');
         if (page + 1 <= PAGES.length) delayGoTo(PAGES[page + 1]);
         else $('#page-content').addClass('right-fade-in');
     });
-    
-    Hammer('#page-content').on("swiperight", function() {
+    Hammer(element).on("swiperight", function() {
         $('#page-content').removeClass('left-fade-in right-fade-in');
         $('#page-content').addClass('right-fade-out');
         if (page - 1 >= 0) delayGoTo(PAGES[page - 1]);

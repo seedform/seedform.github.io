@@ -90,7 +90,7 @@ $(document).ready(function() {
     });
 
     // Touch gestures
-    $('#page-content').swipe({
+    $('html').swipe({
         swipe:function(event, direction, distance, duration, fingerCount) {
             $('#page-content').removeClass('left-fade-in right-fade-in');
             if (direction == 'left' && page + 1 < PAGES.length) {

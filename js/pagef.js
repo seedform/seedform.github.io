@@ -30,15 +30,19 @@ var SOC_TITLES = [
 
 var PAGE_EXIT_DELAY = 300;
 
-var page = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
-var prev = document.referrer.substring(document.referrer.lastIndexOf('/') + 1);
+var page = PAGES.indexOf(location.pathname.substring(location.pathname.lastIndexOf('/') + 1));
+var prev = PAGES.indexOf(document.referrer.substring(document.referrer.lastIndexOf('/') + 1));
+
+function delayGoTo(newLoc) {
+    setTimeout(function() { window.location = newLoc }, PAGE_EXIT_DELAY)
+}
 
 $(document).ready(function() {
 
     // Write the nav-bar to the page
     var nav = '<div class="vac">';
     for (var i = 0; i < PAGES.length; i++) {
-        nav += '<a class="nav-item ' + (page == PAGES[i] ? 'active' : '') + '" href="' + PAGES[i] + '">' + NAV_TITLES[i] + '</a>';
+        nav += '<a class="nav-item ' + (page == i ? 'active' : '') + '" href="' + PAGES[i] + '">' + NAV_TITLES[i] + '</a>';
         nav += i < PAGES.length - 1 ? '&nbsp;|&nbsp;' : '';
     }
     $("#nav").html(nav + '</div>');
@@ -72,11 +76,11 @@ $(document).ready(function() {
     $('#page-content').addClass(animIn);
     $('a.nav-item').click(function(event) {
         event.preventDefault();
-        newLoc = this.getAttribute('href');        
+        var newLoc = this.getAttribute('href');        
         if (PAGES.indexOf(page) < PAGES.indexOf(newLoc)) animOut='left-fade-out';
         else if (PAGES.indexOf(page) > PAGES.indexOf(newLoc)) animOut='right-fade-out';
         $('#page-content').addClass(animOut);
-        setTimeout(function() { window.location = newLoc }, PAGE_EXIT_DELAY);
+        delayGoTo(newLoc);
     });
 
     // Set all non-navigation links to open in a new tab
@@ -84,4 +88,18 @@ $(document).ready(function() {
         $('a').attr('target','_blank');
     });
 
+    Hammer('html').on("swipeleft", function() {
+        $('#page-content').removeClass('left-fade-in right-fade-in');
+        $('#page-content').addClass('left-fade-out');
+        if (page + 1 <= PAGES.length) delayGoTo(PAGES[page + 1]);
+        else $('#page-content').addClass('right-fade-in');
+    });
+    
+    Hammer('html').on("swiperight", function() {
+        $('#page-content').removeClass('left-fade-in right-fade-in');
+        $('#page-content').addClass('right-fade-out');
+        if (page - 1 >= 0) delayGoTo(PAGES[page - 1]);
+        else $('#page-content').addClass('left-fade-in');
+    });
+    
 });

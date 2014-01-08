@@ -43,7 +43,7 @@ $(document).ready(function() {
     var nav = '<div class="vac">';
     for (var i = 0; i < PAGES.length; i++) {
         nav += '<a class="nav-item ' + (page == i ? 'active' : '') + '" href="' + PAGES[i] + '">' + NAV_TITLES[i] + '</a>';
-        nav += i < PAGES.length - 1 ? '&nbsp;|&nbsp;' : '';
+        nav += i < PAGES.length - 1 ? '<span style="color:#aaa; font-size:130%;">|</span>' : '';
     }
     $("#nav").html(nav + '</div>');
 

@@ -48,27 +48,12 @@ $(document).ready(function() {
     $("#nav").html(nav + '</div>');
 
     // Write the footer to the page
-    var foot = '<hr><div style="margin-bottom: 6px; font-size:120%;">';
+    var foot = '';
     for (var i = 0; i < SOC_URLS.length; i++) {
         foot += '<a href="' + SOC_URLS[i] + '" title="' + SOC_TITLES[i] + '" class="text-link"> <img src="img/' + SOC_IMGS[i] + '" class="footer-img-lnk"/> </a>';
         foot += i < SOC_URLS.length - 1 ? '&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;' : '';
     }
-    $("#foot").html(foot + '</div> <hr> Copyright &#169; ' + new Date().getFullYear() + ' Shudmanul Chowdhury');
-    
-    // Set the footer position to be static or fixed based on screen size
-    function fixFoot() {
-        if ($(window).width() < 650) {
-            $('#foot').css('position', 'static');
-            $('#page-content').css('padding-bottom', '20px');
-        } else {
-            $('#foot').css('position', 'fixed');
-            $('#page-content').css('padding-bottom', '110px');
-        }
-    }
-    $(window).resize(function() {
-        fixFoot();
-    });
-    fixFoot();
+    $("#foot").html(foot + '<br>Copyright &#169; ' + new Date().getFullYear() + ' Shudmanul Chowdhury');
     
     // Set transition animations
     var animIn, animOut;

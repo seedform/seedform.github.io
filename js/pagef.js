@@ -12,20 +12,23 @@ var NAV_TITLES = [
 
 var SOC_URLS = [
     'https://github.com/seedform',
+    'http://www.linkedin.com/in/shudman',
     'https://twitter.com/seedform',
     'https://plus.google.com/u/0/108831680097190194078/posts'
 ];
 
 var SOC_IMGS = [
-    'GitHub-Mark-120px-plus.png',
-    'Twitter_logo_blue.png',
-    'Red-signin-Small-base-44dp.png'
+    'github-icon.png',
+    'linkedin-icon.png',
+    'twitter-icon.png',
+    'google-plus-icon.png'
 ];
 
 var SOC_TITLES = [
     'Visit my GitHub profile',
+    'View my LinkedIn profile',
     'Follow me on Twitter',
-    'Adde me on Google+'
+    'Adde me on Google+',
 ];
 
 var PAGE_EXIT_DELAY = 300;
@@ -50,7 +53,8 @@ $(document).ready(function() {
     // Write the footer to the page
     var foot = '';
     for (var i = 0; i < SOC_URLS.length; i++) {
-        foot += '<a href="' + SOC_URLS[i] + '" title="' + SOC_TITLES[i] + '" class="text-link"> <img src="img/' + SOC_IMGS[i] + '" class="footer-img-lnk"/> </a>';
+        foot += '<a href="' + SOC_URLS[i] + '" title="' + SOC_TITLES[i] + '" class="text-link"><img src="img/' + SOC_IMGS[i] +
+                '" style="width:20px;height:20px;vertical-align:middle;"/></a>';
         foot += i < SOC_URLS.length - 1 ? '&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;' : '';
     }
     $("#foot").html(foot + '<br>Copyright &#169; ' + new Date().getFullYear() + ' Shudmanul Chowdhury');

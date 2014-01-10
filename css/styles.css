@@ -58,14 +58,6 @@ noscript {
     color:#c00;
 }
 
-/* #container {
-    width:100%;
-} */
-
-#banner {
-    width:100%;
-}
-
 /* Navigation
 #############################################################
 */
@@ -76,8 +68,8 @@ noscript {
     left:0px;
     top:0px;
     width:100%;
-    height:41px;
-    border-bottom:2px solid #09f;
+    height:40px;
+    border-bottom:2px solid #09c;
     text-align:center;
     background:url('../img/hfbg.png') repeat scroll 0 0 #f5f5f5;
     box-shadow:0px 0px 15px #999;
@@ -99,8 +91,8 @@ a.nav-item {
 .active,
 a.nav-item:hover,
 a.nav-item:active {
-    border-bottom:4px solid #09f !important;
-    color:#09F !important;
+    border-bottom:4px solid #09c !important;
+    color:#09c !important;
 }
 
 a.nav-item:hover,
@@ -112,7 +104,7 @@ a.nav-item:active {
 #############################################################
 */
 #page-content {
-    padding-top:61px;
+    padding-top:60px;
     padding-bottom:20px;
     width:100%;
     text-align:center;
@@ -132,7 +124,7 @@ a.nav-item:active {
     background:#fff;
     color:#777;
     text-decoration:none;
-    overflow:auto;
+    overflow:hidden;
     vertical-align:middle;
     margin:20px;
     box-shadow:0px 0px 10px #aaa;
@@ -142,32 +134,42 @@ a.nav-item:active {
 }
 
 a.page-item {
-    padding:20px;display:inline-block;
+    display:inline-block;
+    padding:20px;
     height:180px;
     width:180px;
 }
 
 a.page-item:hover, 
 a.page-item:active {
-    box-shadow:0px 0px 20px white;
-    -moz-box-shadow:0px 0px 20px white;
-    -o-box-shadow:0px 0px 20px white;
-    -webkit-box-shadow:0px 0px 20px white;
-    color:#09F !important;
+    box-shadow:0px 0px 20px #09c;
+    -moz-box-shadow:0px 0px 20px #09c;
+    -o-box-shadow:0px 0px 20px #09c;
+    -webkit-box-shadow:0px 0px 20px #09c;
+    color:#09c !important;
 }
 
-/* Footer
+/* Header and footer
 #############################################################
 */
+#head {
+    border-bottom:1px solid #09c;
+}
+
 #foot {
-    width:100%;
-    padding:5px 0px;
-    background-color:#f5f5f5;
-    background-image:url('../img/hfbg.png');
-    border-top:1px solid #09f;
-    color:#777;
+    padding:5px;
+    border-top:1px solid #09c;
     text-align:center;
     font-size:80%;
+}
+
+#head,
+#foot {
+    height:50px;
+    width:100%;
+    color:#777;
+    background-color:#f5f5f5;
+    background-image:url('../img/hfbg.png');
 }
 
 /* Buttons
@@ -179,7 +181,7 @@ button.regular-button {
     border:0;
     border-radius:5px;
     background-color:#ddd;
-    color:#09f;
+    color:#09c;
     text-align:center;
     text-decoration:none;
     font-family:'Open Sans Condensed', sans-serif;
@@ -189,7 +191,7 @@ button.regular-button {
 
 button.regular-button:hover,
 button.regular-button:active {
-    background-color:#09f;
+    background-color:#09c;
     color:#fff;
 }
 
@@ -210,6 +212,14 @@ button.regular-button:active {
 
 .aj {
     text-align:justify;
+}
+
+.fl {
+    float:left;
+}
+
+.fr {
+    float:right;
 }
 
 .vac-container {
@@ -235,14 +245,15 @@ a.text-link:active {
 
 .col {
     display:inline-block;
-    max-width:448px;
+    max-width:475px;
     padding:5px;
     vertical-align:top;
     color:#777;
+    font-family: 'Roboto', sans-serif;
 }
 
 .bigblue {
-    color:#09F;
+    color:#09c;
     font-size:250%;
 }
 
@@ -255,5 +266,13 @@ a.text-link:active {
 }
 
 .pad10 {
-    padding: 20px;
+    padding: 10px;
+}
+
+.pad5 {
+    padding: 5px;
+}
+
+#banner {
+    width:100%;
 }

@@ -46,7 +46,7 @@ $(document).ready(function() {
     var nav = '<div class="vac">';
     for (var i = 0; i < PAGES.length; i++) {
         nav += '<a class="nav-item ' + (page == i ? 'active' : '') + '" href="' + PAGES[i] + '">' + NAV_TITLES[i] + '</a>';
-        nav += i < PAGES.length - 1 ? '<span style="color:#aaa; font-size:130%;">|</span>' : '';
+        nav += i < PAGES.length - 1 ? '<span style="color:#aaa; font-weight:300;">|</span>' : '';
     }
     $("#nav").html(nav + '</div>');
 
@@ -66,7 +66,7 @@ $(document).ready(function() {
     $('#page-content').addClass(animIn);
     $('a.nav-item').click(function(event) {
         event.preventDefault();
-        newLoc = this.getAttribute('href');        
+        newLoc = this.getAttribute('href');
         if (page < PAGES.indexOf(newLoc)) animOut='left-fade-out';
         else if (page > PAGES.indexOf(newLoc)) animOut='right-fade-out';
         $('#page-content').addClass(animOut);

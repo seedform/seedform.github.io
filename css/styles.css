@@ -258,10 +258,11 @@ a.text-link:active {
 
 .col {
     display:inline-block;
-    max-width:475px;
-    padding:5px;
+    max-width:470px;
+    padding-right:10px;
     vertical-align:top;
     color:#777;
+    text-align:justify;
 }
 
 .bigblue {

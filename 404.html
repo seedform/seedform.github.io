@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <script src="js/common.js"></script>
+
+    <script>
+        
+        (function countDown (i) {          
+            setTimeout(function () {
+                $('#count').html(i);
+                if (i--) countDown(i);
+                else window.location = 'index.html';
+            }, 1000)
+        })(9);
+    </script>
+    
+</head>
+
+<body>
+    
+    <!-- Navigation -->
+    <div id="nav"></div>
+    
+    <!-- Page items -->
+    <div id="page-content">
+        <div class="centerh">
+            <div class="pad30">
+                <div style="font-wight:700; font-size:700%;">404</div>
+                Game over. You will respawn in <span id="count">10</span>.
+            </div>
+        </div>        
+    </div>
+
+</body>
+
+</html>

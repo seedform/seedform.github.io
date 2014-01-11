@@ -36,8 +36,8 @@ var PAGE_EXIT_DELAY = 300;
 var page = PAGES.indexOf(location.pathname.substring(location.pathname.lastIndexOf('/') + 1));
 var prev = PAGES.indexOf(document.referrer.substring(document.referrer.lastIndexOf('/') + 1));
 
-function goToDelayed(newLoc) {
-    setTimeout(function() { window.location = newLoc }, PAGE_EXIT_DELAY);
+function delayNav(newLoc, delay) {
+    setTimeout(function() { window.location = newLoc }, delay);
 }
 
 $(document).ready(function() {
@@ -54,7 +54,7 @@ $(document).ready(function() {
     var foot = '<div style="padding-bottom:5px;">';
     for (var i = 0; i < SOC_URLS.length; i++) {
         foot += '<a href="' + SOC_URLS[i] + '" title="' + SOC_TITLES[i] + '" class="text-link"><img src="img/' + SOC_IMGS[i] +
-                '" style="width:25px; height:25px; vertical-align:middle;"/></a>';
+                '" class="footer-icon"/></a>';
         foot += i < SOC_URLS.length - 1 ? '&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;' : '';
     }
     $("#foot").html(foot + '</div>Copyright &#169; ' + new Date().getFullYear() + ' Shudmanul Chowdhury');
@@ -70,7 +70,7 @@ $(document).ready(function() {
         if (page < PAGES.indexOf(newLoc)) animOut='left-fade-out';
         else if (page > PAGES.indexOf(newLoc)) animOut='right-fade-out';
         $('#page-content').addClass(animOut);
-        goToDelayed(newLoc);
+        delayNav(newLoc, PAGE_EXIT_DELAY);
     });
 
     // Set all non-navigation links to open in a new tab
@@ -92,10 +92,10 @@ $(document).ready(function() {
                 $('#page-content').removeClass('left-fade-in right-fade-in');
                 if (direction == 'left' && page + 1 < PAGES.length) {
                     $('#page-content').addClass('left-fade-out');
-                    goToDelayed(PAGES[page + 1]);
+                    delayNav(PAGES[page + 1], PAGE_EXIT_DELAY);
                 } else if (direction == 'right' && page - 1 >= 0) {
                     $('#page-content').addClass('right-fade-out');
-                    goToDelayed(PAGES[page - 1]);
+                    delayNav(PAGES[page - 1], PAGE_EXIT_DELAY);
                 }
             },
             allowPageScroll:'vertical'

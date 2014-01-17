@@ -46,7 +46,7 @@ $(document).ready(function() {
     var nav = '<div class="vac">';
     for (var i = 0; i < PAGES.length; i++) {
         nav += '<a class="nav-item ' + (page == i ? 'active' : '') + '" href="' + PAGES[i] + '">' + NAV_TITLES[i] + '</a>';
-        nav += i < PAGES.length - 1 ? '<span style="color:#aaa; font-weight:300;">|</span>' : '';
+        nav += i < PAGES.length - 1 ? '<span class="tab-divider"></span>':'';//'<span style="color:#aaa; font-weight:300;">|</span>' : '';
     }
     $("#nav").html(nav + '</div>');
 
@@ -58,7 +58,7 @@ $(document).ready(function() {
         foot += i < SOC_URLS.length - 1 ? '&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;' : '';
     }
     $("#foot").html(foot + '</div>Copyright &#169; ' + new Date().getFullYear() + ' Shudmanul Chowdhury');
-    
+
     // Set transition animations
     var animIn, animOut;
     if (page < prev) animIn='right-fade-in';

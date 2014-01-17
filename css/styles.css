@@ -3,7 +3,9 @@
 */
 body {
     background-color:#ddd;
-    overflow-y:hidden;
+    background-image:url('../img/diagonal-noise.png');
+    background-attachment:fixed;
+    overflow-y:scroll;
     overflow-x:hidden;
 }
 
@@ -59,6 +61,14 @@ noscript {
     color:#c00;
 }
 
+::selection {
+	background-color: #f0f0f0;
+}
+
+::-moz-selection {
+	background-color: #f0f0f0;
+}
+
 /* Navigation
 #############################################################
 */
@@ -71,16 +81,15 @@ noscript {
     width:100%;
     height:52px;
     border-bottom:3px solid #09c;
-    background-color:#000;
-    box-shadow:0px 0px 15px #999;
-    -moz-box-shadow:0px 0px 15px #999;
-    -o-box-shadow:0px 0px 15px #999;
-    -webkit-box-shadow:0px 0px 15px #999;
+    background-color:#444;
+    box-shadow:0px 0px 15px #777;
+    -moz-box-shadow:0px 0px 15px #777;
+    -o-box-shadow:0px 0px 15px #777;
+    -webkit-box-shadow:0px 0px 15px #777;
     z-index:50;
     text-align:center;
     font-size:90%;
-    font-weight:400;
-    
+    font-weight:400;   
 }
 
 a.nav-item {
@@ -91,15 +100,17 @@ a.nav-item {
     color:white;
 }
 
-.active,
-a.nav-item:hover,
-a.nav-item:active {
+.active {
     border-bottom:6px solid #09c !important;
 }
 
 a.nav-item:hover,
 a.nav-item:active {
-    background-color: rgba(0,153,255,0.4);
+    background-color: #777;
+}
+
+.tab-divider {
+    border-left: 1px solid #aaa;
 }
 
 /* Page content
@@ -110,7 +121,6 @@ a.nav-item:active {
     padding-bottom:20px;
     width:100%;
     text-align:center;
-    overflow-y:auto;
 }
 
 .centerh {
@@ -123,8 +133,8 @@ a.nav-item:active {
 
 .page-item {
     border-radius:5px;
-    margin: 0px 20px;
-    background:#f0f0f0;
+    margin: 10px 20px;
+    background-color:#f0f0f0;
     color:#777;
     text-decoration:none;
     overflow:hidden;
@@ -142,11 +152,9 @@ a.nav-item:active {
     height:180px;
     width:180px;
     border-radius:3px;
-    background:#fff;
     overflow:hidden;
     vertical-align:middle;
-    background-color:white;
-    /* border-bottom:4px solid #e5e5e5; */
+    background-color:#f5f5f5;
     box-shadow:0px 0px 7px #ddd;
     -moz-box-shadow:0px 0px 7px #ddd;
     -o-box-shadow:0px 0px 7px #ddd;
@@ -158,6 +166,7 @@ a.nav-item:active {
 
 a.card:hover, 
 a.card:active {
+    background-color:#fff;
     color:#09c !important;
 }
 

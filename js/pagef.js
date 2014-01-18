@@ -31,7 +31,7 @@ var SOC_TITLES = [
     'Adde me on Google+'
 ];
 
-var PAGE_EXIT_DELAY = 300;
+var PAGE_EXIT_DELAY = 500;
 
 var page = PAGES.indexOf(location.pathname.substring(location.pathname.lastIndexOf('/') + 1));
 var prev = PAGES.indexOf(document.referrer.substring(document.referrer.lastIndexOf('/') + 1));

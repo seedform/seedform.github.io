@@ -45,7 +45,7 @@ $(document).ready(function() {
     $("#nav").html(nav + '</div>');
 
     // Write the footer to the page
-    var foot = '<div style="padding-bottom:5px;">';
+    var foot = '<div>';
     for (var i = 0; i < SOC_URLS.length; i++) {
         foot += '<a href="' + SOC_URLS[i] + '" title="' + SOC_TITLES[i] + '" class="text-link"><img src="img/' + SOC_IMGS[i] +
                 '" class="footer-icon"/></a>';

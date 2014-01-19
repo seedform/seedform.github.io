@@ -12,26 +12,20 @@ var NAV_TITLES = [
 
 var SOC_URLS = [
     'https://github.com/seedform',
-    'http://ca.linkedin.com/in/shudman',
-    'https://twitter.com/seedform',
-    'https://plus.google.com/u/0/108831680097190194078/posts'
+    'http://ca.linkedin.com/in/shudman'
 ];
 
 var SOC_IMGS = [
     'github-icon.png',
-    'linkedin-icon.png',
-    'twitter-icon.png',
-    'google-plus-icon.png'
+    'linkedin-icon.png'
 ];
 
 var SOC_TITLES = [
     'Visit my GitHub profile',
-    'View my LinkedIn profile',
-    'Follow me on Twitter',
-    'Adde me on Google+'
+    'View my LinkedIn profile'
 ];
 
-var PAGE_EXIT_DELAY = 500;
+var PAGE_EXIT_DELAY = 900;
 
 var page = PAGES.indexOf(location.pathname.substring(location.pathname.lastIndexOf('/') + 1));
 var prev = PAGES.indexOf(document.referrer.substring(document.referrer.lastIndexOf('/') + 1));

@@ -186,13 +186,12 @@
     -webkit-animation-name:pulse;
 }
 
-
 .left-fade-in,
 .right-fade-in,
 .left-fade-out,
 .right-fade-out {
-    animation-fill-mode: both;
-    -webkit-animation-fill-mode: both;
-    animation-duration: 0.5s;
-    -webkit-animation-duration: 0.5s;
+    animation-fill-mode:both;
+    -webkit-animation-fill-mode:both;
+    animation-duration:1s;
+    -webkit-animation-duration:1s;
 }

@@ -16,7 +16,7 @@ var SOC_URLS = [
 ];
 
 var SOC_IMGS = [
-    'github-icon.png',
+    'Octocat.png',
     'linkedin-icon.png'
 ];
 
@@ -25,7 +25,7 @@ var SOC_TITLES = [
     'View my LinkedIn profile'
 ];
 
-var PAGE_EXIT_DELAY = 900;
+var PAGE_EXIT_DELAY = 800;
 
 var page = PAGES.indexOf(location.pathname.substring(location.pathname.lastIndexOf('/') + 1));
 var prev = PAGES.indexOf(document.referrer.substring(document.referrer.lastIndexOf('/') + 1));

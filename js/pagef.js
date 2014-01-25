@@ -12,7 +12,7 @@ var NAV_TITLES = [
 
 var SOC_URLS = [
     'https://github.com/seedform',
-    'http://ca.linkedin.com/in/shudman'
+    'http://www.linkedin.com/in/shudman'
 ];
 
 var SOC_IMGS = [
@@ -25,7 +25,7 @@ var SOC_TITLES = [
     'View my LinkedIn profile'
 ];
 
-var PAGE_EXIT_DELAY = 800;
+var PAGE_EXIT_DELAY = 300;
 
 var page = PAGES.indexOf(location.pathname.substring(location.pathname.lastIndexOf('/') + 1));
 var prev = PAGES.indexOf(document.referrer.substring(document.referrer.lastIndexOf('/') + 1));

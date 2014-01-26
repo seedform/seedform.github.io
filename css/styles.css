@@ -8,6 +8,9 @@ body {
     background-attachment:fixed;
     overflow-y:scroll;
     overflow-x:hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size:100%;
+    font-weight:300;
 }
 
 html, 
@@ -16,9 +19,6 @@ body {
     height:98%;
     margin:0;
     padding:0;
-    font-family: 'Roboto', sans-serif;
-    font-size:100%;
-    font-weight:300;
 }
 
 a:link,
@@ -261,7 +261,7 @@ a.text-link {
 
 a.text-link:hover,
 a.text-link:active {
-    opacity:0.7;
+    color:#09c;
 }
 
 .col {

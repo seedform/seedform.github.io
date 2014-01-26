@@ -51,18 +51,18 @@ $(document).ready(function() {
                 '" class="footer-icon"/></a>';
         foot += i < SOC_URLS.length - 1 ? '&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;' : '';
     }
-    $("#foot").html(foot + '</div>Copyright &#169; ' + new Date().getFullYear() + ' Shudmanul Chowdhury');
+    $("#foot").html(foot + '</div>Copyright &#169; ' + new Date().getFullYear() + ' Shudmanul Chowdhury<br>Content licensed under a <a class="text-link" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>');
 
     // Set transition animations
     var animIn, animOut;
-    if (page < prev) animIn='right-fade-in';
-    else if (page > prev) animIn='left-fade-in';
+    if (page < prev) animIn='right-slide-in';
+    else if (page > prev) animIn='left-slide-in';
     $('#page-content').addClass(animIn);
     $('a.nav-item').click(function(event) {
         event.preventDefault();
         newLoc = this.getAttribute('href');
-        if (page < PAGES.indexOf(newLoc)) animOut='left-fade-out';
-        else if (page > PAGES.indexOf(newLoc)) animOut='right-fade-out';
+        if (page < PAGES.indexOf(newLoc)) animOut='left-slide-out';
+        else if (page > PAGES.indexOf(newLoc)) animOut='right-slide-out';
         $('#page-content').addClass(animOut);
         delayNav(newLoc, PAGE_EXIT_DELAY);
     });
@@ -83,12 +83,12 @@ $(document).ready(function() {
     if (jQuery.browser.mobile) {
         $('html').swipe({
             swipe:function(event, direction, distance, duration, fingerCount) {
-                $('#page-content').removeClass('left-fade-in right-fade-in');
+                $('#page-content').removeClass('left-slide-in right-slide-in');
                 if (direction == 'left' && page + 1 < PAGES.length) {
-                    $('#page-content').addClass('left-fade-out');
+                    $('#page-content').addClass('left-slide-out');
                     delayNav(PAGES[page + 1], PAGE_EXIT_DELAY);
                 } else if (direction == 'right' && page - 1 >= 0) {
-                    $('#page-content').addClass('right-fade-out');
+                    $('#page-content').addClass('right-slide-out');
                     delayNav(PAGES[page - 1], PAGE_EXIT_DELAY);
                 }
             },

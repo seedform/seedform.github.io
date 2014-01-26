@@ -1,17 +1,15 @@
 /* Fading in
 #############################################################
 */
-@keyframes left-fade-in {
+@keyframes left-slide-in {
 
     from {
-        opacity:0;
         transform: translateX(100%);
         -ms-transform: translateX(100%);
         -webkit-transform: translateX(100%);
     }
 
     to {
-        opacity:1;
         transform: translateX(0%);
         -ms-transform: translateX(0%);
         -webkit-transform: translateX(0%);
@@ -19,40 +17,36 @@
     
 }
 
-@-webkit-keyframes left-fade-in {
+@-webkit-keyframes left-slide-in {
 
     from {
-        opacity:0;
         transform: translateX(100%);
         -webkit-transform: translateX(100%);
     }
 
     to {
-        opacity:1;
         transform: translateX(0%);
         -webkit-transform: translateX(0%);
     }
     
 }
 
-.left-fade-in {
-    animation-name: left-fade-in;
-    -webkit-animation-name: left-fade-in;
+.left-slide-in {
+    animation-name: left-slide-in;
+    -webkit-animation-name: left-slide-in;
 }
 
 /*---------------------------------------------------------*/
 
-@keyframes right-fade-in {
+@keyframes right-slide-in {
 
     from {
-        opacity:0;
         transform: translateX(-100%);
         -ms-transform: translateX(-100%);
         -webkit-transform: translateX(-100%);
     }
 
     to {
-        opacity:1;
         transform: translateX(0%);
         -ms-transform: translateX(0%);
         -webkit-transform: translateX(0%);
@@ -60,41 +54,37 @@
     
 }
 
-@-webkit-keyframes right-fade-in {
+@-webkit-keyframes right-slide-in {
 
     from {
-        opacity:0;
         transform: translateX(-100%);
         -webkit-transform: translateX(-100%);
     }
 
     to {
-        opacity:1;
         transform: translateX(0%);
         -webkit-transform: translateX(0%);
     }
     
 }
 
-.right-fade-in {
-    animation-name: right-fade-in;
-    -webkit-animation-name: right-fade-in;
+.right-slide-in {
+    animation-name: right-slide-in;
+    -webkit-animation-name: right-slide-in;
 }
 
 /* Fading out
 #############################################################
 */
-@keyframes left-fade-out {
+@keyframes left-slide-out {
 
     from {
-        opacity:1;
         transform: translateX(0%);
         -ms-transform: translateX(0%);
         -webkit-transform: translateX(0%);
     }
 
     to {
-        opacity:0;
         transform: translateX(-100%);
         -ms-transform: translateX(-100%);
         -webkit-transform: translateX(-100%);
@@ -102,40 +92,36 @@
     
 }
 
-@-webkit-keyframes left-fade-out {
+@-webkit-keyframes left-slide-out {
 
     from {
-        opacity:1;
         transform: translateX(0%);
         -webkit-transform: translateX(0%);
     }
 
     to {
-        opacity:0;
         transform: translateX(-100%);
         -webkit-transform: translateX(-100%);
     }
     
 }
 
-.left-fade-out {
-    animation-name: left-fade-out;
-    -webkit-animation-name: left-fade-out;
+.left-slide-out {
+    animation-name: left-slide-out;
+    -webkit-animation-name: left-slide-out;
 }
 
 /*---------------------------------------------------------*/
 
-@keyframes right-fade-out {
+@keyframes right-slide-out {
 
     from {
-        opacity:1;
         transform: translateX(0%);
         -ms-transform: translateX(0%);
         -webkit-transform: translateX(0%);
     }
 
     to {
-        opacity:0;
         transform: translateX(100%);
         -ms-transform: translateX(100%);
         -webkit-transform: translateX(100%);
@@ -143,41 +129,39 @@
     
 }
 
-@-webkit-keyframes right-fade-out {
+@-webkit-keyframes right-slide-out {
 
     from {
-        opacity:1;
         transform: translateX(0%);
         -webkit-transform: translateX(0%);
     }
 
     to {
-        opacity:0;
         transform: translateX(100%);
         -webkit-transform: translateX(100%);
     }
     
 }
 
-.right-fade-out {
-    animation-name: right-fade-out;
-    -webkit-animation-name: right-fade-out;
+.right-slide-out {
+    animation-name: right-slide-out;
+    -webkit-animation-name: right-slide-out;
 }
 
 /*---------------------------------------------------------*/
 
-.left-fade-in,
-.right-fade-in,
-.left-fade-out,
-.right-fade-out {
+.left-slide-in,
+.right-slide-in,
+.left-slide-out,
+.right-slide-out {
     animation-duration:0.3s;
     -moz-animation-duration:0.3s;
     -o-animation-duration:0.3s;
     -webkit-animation-duration:0.3s;
 }
 
-.left-fade-out,
-.right-fade-out {
+.left-slide-out,
+.right-slide-out {
     animation-fill-mode:both;
     animation-timing-function:ease-in;
     -moz-animation-fill-mode:both;

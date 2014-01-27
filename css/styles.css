@@ -128,7 +128,7 @@ a.nav-item:active {
 .page-item {
     margin: 72px 20px 20px 20px;
     border-radius:5px;
-    background-color:rgba(0,0,0,0.5);
+    background-color:rgba(0,0,0,0.6);
     color:#ddd;
     text-decoration:none;
     overflow:hidden;
@@ -181,7 +181,6 @@ a.card:active {
 #foot {
     width:100%;
     color:#777;
-    
     font-size:60%;
     pading:5px;
 }
@@ -255,13 +254,19 @@ button.regular-button:active {
 /* Misc styles
 #############################################################
 */
-a.text-link {
+a.text-link,
+a.img-link {
     color:#777;
 }
 
 a.text-link:hover,
 a.text-link:active {
     color:#09c;
+}
+
+a.img-link:hover,
+a.img-link:active {
+    opacity:0.5;
 }
 
 .col {

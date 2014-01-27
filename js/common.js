@@ -6,6 +6,5 @@ document.write(
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> \
     <script src="js/jquery.touchSwipe.min.js"></script> \
     <script src="js/pagef.js"></script> \
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> \
-    <div class="background"></div>'
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />'
 );

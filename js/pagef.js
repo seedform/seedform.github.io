@@ -4,6 +4,12 @@ var PAGES = [
     'contact.html'
 ];
 
+var PAGE_TITLES = [
+    'Shudman | Think -> Code -> Create',
+    'About',
+    'Contact'
+];
+
 var NAV_TITLES = [
     'PROJECTS',
     'ABOUT',
@@ -36,6 +42,8 @@ function delayNav(newLoc, delay) {
 
 $(document).ready(function() {
 
+    $('head').append('<title>' + (page >= 0 ? PAGE_TITLES[page] : 'CDIV') + '</title>');
+
     // Write the nav-bar to the page
     var nav = '<div class="vac">';
     for (var i = 0; i < PAGES.length; i++) {
@@ -47,8 +55,7 @@ $(document).ready(function() {
     // Write the footer to the page
     var foot = '<div>';
     for (var i = 0; i < SOC_URLS.length; i++) {
-        foot += '<a href="' + SOC_URLS[i] + '" title="' + SOC_TITLES[i] + '" class="text-link"><img src="img/' + SOC_IMGS[i] +
-                '" class="footer-icon"/></a>';
+        foot += '<a href="' + SOC_URLS[i] + '" title="' + SOC_TITLES[i] + '" class="img-link"><img src="img/' + SOC_IMGS[i] + '" class="footer-icon"/></a>';
         foot += i < SOC_URLS.length - 1 ? '&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;' : '';
     }
     $("#foot").html(foot + '</div>Copyright &#169; ' + new Date().getFullYear() + ' Shudmanul Chowdhury<br>Content licensed under a <a class="text-link" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>');

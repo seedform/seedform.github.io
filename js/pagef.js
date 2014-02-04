@@ -4,12 +4,6 @@ var PAGES = [
     'contact.html'
 ];
 
-var PAGE_TITLES = [
-    'Shudman | Think -> Code -> Create',
-    'About',
-    'Contact'
-];
-
 var NAV_TITLES = [
     'PROJECTS',
     'ABOUT',
@@ -41,8 +35,6 @@ function delayNav(newLoc, delay) {
 }
 
 $(document).ready(function() {
-
-    $('head').append('<title>' + (page >= 0 ? PAGE_TITLES[page] : 'CDIV') + '</title>');
 
     // Write the nav-bar to the page
     var nav = '<div class="vac">';

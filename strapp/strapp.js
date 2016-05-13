@@ -38,10 +38,8 @@ g.procs = {
 			var trm = sanitize(text).split(sanitize(delimiter));
 			var arr = "{ ";
 			for (var i = 0; i < trm.length; ++i) {
-				arr += '"' + trm[i].replace(/"/g,"\\\"") + '"'
-				if (i < trm.length - 1) {
-					arr += ", "
-				}
+				arr += '"' + trm[i].replace(/\\/g,"\\\\").replace(/"/g,"\\\"");
+				arr += (i < trm.length - 1) ? "\", " : "\"";
 			}
 			return arr + " }";
 		}

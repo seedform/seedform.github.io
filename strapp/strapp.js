@@ -93,9 +93,6 @@ function updateOutput() {
 
 				// hide typing icon
 				e.throbber.style.display = "none";
-
-				// clear optional argument
-				e.optionArg.value = ''
 			}
 			g.inputTimeout = c.INPUT_TIMEOUT_DEFAULT;
 		}
@@ -104,6 +101,7 @@ function updateOutput() {
 
 function instantUpdate() {
 	g.inputTimeout = 0;
+    e.optionArg.value = "";
 	updateOutput();
 }
 

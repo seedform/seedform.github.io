@@ -33,6 +33,7 @@
 	margin-top: 15px;
 	font-family: 'Share Tech Mono', monospace;
     white-space: pre-wrap;
+    word-wrap:break-word;
 }
 
 #throbber {

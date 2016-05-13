@@ -59,7 +59,19 @@ g.procs = {
 		func: function(text) {
 			return sanitize(text).toLowerCase();
 		}
-	}
+	},
+
+    "HTML Entities": {
+        args: false,
+        argP: "",
+        func: function(text) {
+            var converted = "";
+            for (var i = 0; i < text.length; i++) {
+                converted = converted + "&#38;&#35;" + text.charCodeAt(i) + "&#59;";
+            }
+            return converted;
+        }
+    }
 }
 
 // listener callback

@@ -1,0 +1,45 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="#000">
+<link type="text/css" href="strapp.css" rel="stylesheet"></link>
+<script type="text/javascript" src="strapp.js"></script>
+<title>STRAPP - A simple string tool</title>
+</head>
+<body>
+
+<div id="pageContent">
+
+<h1 id="pageTitle">STRAPP</h1>
+
+<div class="catBlock">
+	<textarea id="textInput" class="edgyInput" placeholder="Type here..." maxlength="10000" autofocus></textarea><img id="throbber" src="throbber.gif">
+</div>
+
+<div class="catBlock">
+	<table class="stats">
+		<tr>
+			<td>Characters</td>
+			<td>Words</td>
+			<td>Lines</td>
+		</tr>
+		<tr>
+			<td id="charCount">0</td>
+			<td id="wordCount">0</td>
+			<td id="lineCount">0</td>
+		</tr>
+	</table>
+</div>
+
+<div class="catBlock">
+	<span>
+	<select id="outputOpt" class="edgyInput edgyArgs">
+	</select>
+	<textarea id="optionArg" class="edgyInput edgyArgs" maxlength="number"></textarea>
+	</span>
+	<!-- Loading icon obtained from http://loading.io/ -->
+</div>
+<pre id="textOutput"></pre>
+</div>
+</body>
+</html>

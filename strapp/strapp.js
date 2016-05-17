@@ -1,6 +1,6 @@
 // miliseconds to wait until updating ouput
 var c = {};	// constants
-var e = {}; 	// DOM objects
+var e = {};	// DOM elements
 var g = {};	// other global vars
 
 c.INPUT_TIMEOUT_DEFAULT = 500;
@@ -61,17 +61,17 @@ g.procs = {
 		}
 	},
 
-    "HTML Entities": {
-        args: false,
-        argP: "",
-        func: function(text) {
-            var converted = "";
-            for (var i = 0; i < text.length; i++) {
-                converted = converted + "&#38;&#35;" + text.charCodeAt(i) + "&#59;";
-            }
-            return converted;
-        }
-    }
+	"HTML Entities": {
+		args: false,
+		argP: "",
+		func: function(text) {
+			var converted = "";
+			for (var i = 0; i < text.length; i++) {
+				converted = converted + "&#38;&#35;" + text.charCodeAt(i) + "&#59;";
+			}
+			return converted;
+		}
+	}
 }
 
 // listener callback
@@ -111,7 +111,7 @@ function updateOutput() {
 
 function instantUpdate() {
 	g.inputTimeout = 0;
-    e.optionArg.value = "";
+	e.optionArg.value = "";
 	updateOutput();
 }
 
